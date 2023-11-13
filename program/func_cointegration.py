@@ -62,7 +62,7 @@ def store_cointegration_results(df_market_prices):
         series_1 = df_market_prices[base_market].values.astype(float).tolist()
         # Get Quote Pair
         for quote_market in markets[index +1:]:
-            series_2 = df_market_prices[quote_market].values.astype(float).tolist() 
+            series_2 = df_market_prices[quote_market].values.astype(float).tolist()  
             # Check cointegration
             coint_flag, hedge_ratio, half_life = calculate_cointegration(series_1, series_2)
 
