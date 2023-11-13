@@ -30,9 +30,7 @@ def place_market_order(client, market, side, size, price, reduce_only):
         time_in_force="FOK", 
         reduce_only=reduce_only
     )
-
     # print(placed_order.data)
-
     return placed_order.data
 
 
@@ -74,8 +72,8 @@ def abort_all_positions(client):
             time.sleep(0.2)
 
         # override json file with empty list
-        bot_agents = []
-        with open("bot_agents.json", "w") as f:
-            json.dump(bot_agents, f)
+        # bot_agents = []
+        # with open("bot_agents.json", "w") as f:
+        #     json.dump(bot_agents, f)
 
         return close_orders
