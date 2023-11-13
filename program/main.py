@@ -13,7 +13,7 @@ if __name__ == "__main__":
         print("Error connecting to client: ", e)
         exit(1)
 
-
+    # close all open positions  
     if ABORT_ALL_POSITIONS:
         try:
             print("Closing all positions...")

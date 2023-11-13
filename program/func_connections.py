@@ -11,7 +11,6 @@ from constants import (
     HTTP_PROVIDER,
 )
 
-# Connect to DYDX
 def connect_dydx():
 
     # Create Client Connection
@@ -36,5 +35,4 @@ def connect_dydx():
     print("Account ID: ", account_id)
     print("Quote Balance: ", quote_balance)
 
-    # Return Client
     return client 

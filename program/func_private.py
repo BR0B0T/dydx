@@ -30,7 +30,6 @@ def place_market_order(client, market, side, size, price, reduce_only):
         time_in_force="FOK", 
         reduce_only=reduce_only
     )
-    # print(placed_order.data)
     return placed_order.data
 
 
@@ -39,11 +38,11 @@ def abort_all_positions(client):
     client.private.cancel_all_orders()
     time.sleep(0.5)
     markets = client.public.get_markets().data # find tick size
-    # print(markets)
     time.sleep(0.5)
+
     positions = client.private.get_positions(status="OPEN")
     all_positions = positions.data["positions"]
-    # print(all_positions)
+
     # handle open positions
     close_orders = []
     if len(all_positions) > 0:
@@ -52,7 +51,7 @@ def abort_all_positions(client):
             side = "BUY"
             if position["side"] == "LONG":
                 side = "SELL"
-            # print(market, side)
+
             # get Price
             price = float(position["entryPrice"])
             accept_price = price * 1.7 if side == "BUY" else price * 0.3
@@ -70,10 +69,5 @@ def abort_all_positions(client):
             )
             close_orders.append(order)
             time.sleep(0.2)
-
-        # override json file with empty list
-        # bot_agents = []
-        # with open("bot_agents.json", "w") as f:
-        #     json.dump(bot_agents, f)
 
         return close_orders
