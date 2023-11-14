@@ -12,6 +12,7 @@ MODE = "DEVELOPMENT"
 # Close all open positions and orders
 ABORT_ALL_POSITIONS = False
 
+# ---- REM TO CHANGE WHEN NOT TESTING ----
 # Find Cointegrated Pairs
 FIND_COINTEGRATED = True
 
