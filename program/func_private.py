@@ -6,6 +6,13 @@ from datetime import datetime, timedelta
 from func_utils import format_number
 
 
+def check_order_status(client, order_id):
+    order = client.private.get_order_by_id(order_id)
+    if order.data:
+        if "order" in order.data.keys():
+            return order.data["order"]["status"]
+    return "FAILED"
+
 
 def place_market_order(client, market, side, size, price, reduce_only):
     # Get Position Id
