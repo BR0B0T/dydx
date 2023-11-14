@@ -10,15 +10,17 @@ MODE = "DEVELOPMENT"
 
 # ---- REM TO CHANGE WHEN NOT TESTING ----
 # Close all open positions and orders
-ABORT_ALL_POSITIONS = False
+ABORT_ALL_POSITIONS = True
 
 # ---- REM TO CHANGE WHEN NOT TESTING ----
 # Find Cointegrated Pairs
-FIND_COINTEGRATED = True
+FIND_COINTEGRATED = False
+
 
 # Manage Exits
 MANAGE_EXITS = True
 
+# ---- REM TO CHANGE WHEN NOT TESTING ----
 # Place Trades
 PLACE_TRADES = True
 
