@@ -1,12 +1,9 @@
 from dydx3.constants import API_HOST_GOERLI, API_HOST_MAINNET
 from decouple import config 
 
-from dydx3.constants import API_HOST_GOERLI, API_HOST_MAINNET
-from decouple import config
 
 # !!!! SELECT MODE !!!!
 MODE = "DEVELOPMENT"
-
 
 # ---- REM TO CHANGE WHEN NOT TESTING ----
 # Close all open positions and orders

@@ -31,19 +31,19 @@ class BotAgent:
         ):
 
         # Initialize class variables
-        self.client = client
-        self.market_1 = market_1
-        self.market_2 = market_2
-        self.base_side = base_side
-        self.base_size = base_size
-        self.base_price = base_price
-        self.quote_side = quote_side
-        self.quote_size = quote_size
+        self.client      = client
+        self.market_1    = market_1
+        self.market_2    = market_2
+        self.base_side   = base_side
+        self.base_size   = base_size
+        self.base_price  = base_price
+        self.quote_side  = quote_side
+        self.quote_size  = quote_size
         self.quote_price = quote_price
-        self.accept_failsafe_base_price = accept_failsafe_base_price
-        self.z_score = z_score
-        self.half_life = half_life
+        self.z_score     = z_score
+        self.half_life      = half_life
         self.hedge_ratio = hedge_ratio
+        self.accept_failsafe_base_price = accept_failsafe_base_price
 
         # Initialze output variable
         # Pair status options are FAILED, LIVE, CLOSE, ERROR
